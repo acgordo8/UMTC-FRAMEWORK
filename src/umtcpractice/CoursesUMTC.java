@@ -1,11 +1,10 @@
 package umtcpractice;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class CoursesUMTC extends VariablesAndBrowser{
@@ -30,15 +29,25 @@ public class CoursesUMTC extends VariablesAndBrowser{
 		driver.findElement(By.xpath("//*[@id=\"wpbody-content\"]/div[4]/a")).click();
 		Thread.sleep(3000);
 		
+		driver.findElement(By.cssSelector("#title")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Information Technology");
+		Thread.sleep(3000);
+		
+		
 		
 	/*	//Close Notification
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id=\"editor\"]/div/div/div/div[6]/div/div/div/div/button")).click();
 		Thread.sleep(2000);		*/
 		
-		driver.findElement(By.id("pdf-file")).click();
-		 Runtime.getRuntime().exec("C:\\Users\\DICE205\\Documents\\FileUpload.exe");	
-		 
-		driver.navigate().back();
+		 driver.findElement(By.id("pdf-file")).click();
+		 Thread.sleep(3000);
+		 Runtime.getRuntime().exec("C:\\Users\\DICE205\\Documents\\PDF.exe");
+		 Thread.sleep(3000);
+		 driver.findElement(By.id("in-course_category-15")).click();
+		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		 driver.findElement(By.cssSelector("#publish")).click();
+		 Thread.sleep(3000);
+		 driver.findElement(By.cssSelector("#post-preview")).click();
 	}
+	
 }

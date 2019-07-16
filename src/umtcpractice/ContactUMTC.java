@@ -1,9 +1,14 @@
 package umtcpractice;
 
+import static org.testng.Assert.fail;
+
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class ContactUMTC extends VariablesAndBrowser {
@@ -32,9 +37,26 @@ public class ContactUMTC extends VariablesAndBrowser {
 		Thread.sleep(3000);
 		
 		
-		driver.switchTo().frame(driver.findElement(By.id("//*[@id=\"tinymce\"]")));
-		driver.findElement(By.cssSelector("#tinymce > p:nth-child(1)")).click();	
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@id=\"tinymce\"]/p[1]")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Sample");
+		WebElement countryUL= driver.findElement(By.xpath("//*[@id=\"content\"]"));
+		List<WebElement> countriesList=countryUL.findElements(By.tagName("strong[1]"));
+		for (WebElement strong : countriesList) {
+		if (strong.getText().equals("<strong>United Marine Training Center, Inc.</strong>\r\n" + 
+				"2120 Leon Guinto Street Malate,\r\n" + 
+				"1004 Malate, Manila, Philippines\r\n" + 
+				"T: +63 2 981 6682\r\n" + 
+				"F: +63 2 981 6601")) {
+		     strong.sendKeys(Keys.chord(Keys.CONTROL, "a"),"Sample");
+		   }
+		}
+		    
+		    Thread.sleep(3000);
+		//driver.switchTo().frame(driver.findElement(By.id("//*[@id=\"tinymce\"]")));
+		//driver.findElement(By.cssSelector("#tinymce > p:nth-child(1)")).click();	
+		//Thread.sleep(3000);
+		//driver.findElement(By.xpath("//*[@id=\"tinymce\"]/p[1]")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Sample");
+		
+	
+		
+		
 	}
 }

@@ -80,11 +80,12 @@ public class CareersUMTC extends VariablesAndBrowser {
 			System.out.println("Successfully Uploaded");
 			
 			Thread.sleep(5000);
-			
+			 
 
 			driver.findElement(By.id("publish")).click();
 			Thread.sleep(5000);
 			driver.findElement(By.cssSelector("#post-preview")).click();
+			
 			
 	}
 

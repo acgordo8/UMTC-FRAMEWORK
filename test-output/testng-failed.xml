@@ -5,12 +5,12 @@
   <test name="Careers UMTC(failed)" parallel="none">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="umtcpractice.CareersUMTC">
+      <class name="umtcpractice.TimelineExpress">
         <methods>
+          <include name="timeline"/>
           <include name="MultipleBrowser"/>
-          <include name="careers"/>
         </methods>
-      </class> <!-- umtcpractice.CareersUMTC -->
+      </class> <!-- umtcpractice.TimelineExpress -->
     </classes>
   </test> <!-- Careers UMTC(failed) -->
 </suite> <!-- Failed suite [Suite] -->

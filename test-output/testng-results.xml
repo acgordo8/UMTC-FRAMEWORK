@@ -2,14 +2,14 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="60274" started-at="2019-07-15T03:25:15Z" finished-at="2019-07-15T03:26:15Z">
+  <suite name="Suite" duration-ms="47045" started-at="2019-07-16T06:51:35Z" finished-at="2019-07-16T06:52:22Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="6" started-at="2019-07-15T03:25:15Z" finished-at="2019-07-15T03:25:15Z">
+    <test name="Test" duration-ms="4" started-at="2019-07-16T06:51:35Z" finished-at="2019-07-16T06:51:35Z">
     </test> <!-- Test -->
-    <test name="Careers UMTC" duration-ms="60223" started-at="2019-07-15T03:25:15Z" finished-at="2019-07-15T03:26:15Z">
-      <class name="umtcpractice.CareersUMTC">
-        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.CareersUMTC@62ee68d8]" name="MultipleBrowser" is-config="true" duration-ms="6618" started-at="2019-07-15T11:25:15Z" finished-at="2019-07-15T11:25:22Z">
+    <test name="Careers UMTC" duration-ms="47007" started-at="2019-07-16T06:51:35Z" finished-at="2019-07-16T06:52:22Z">
+      <class name="umtcpractice.TimelineExpress">
+        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.TimelineExpress@62ee68d8]" name="MultipleBrowser" is-config="true" duration-ms="9117" started-at="2019-07-16T14:51:35Z" finished-at="2019-07-16T14:51:45Z">
           <params>
             <param index="0">
               <value>
@@ -20,15 +20,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultipleBrowser -->
-        <test-method status="PASS" signature="lumagda()[pri:0, instance:umtcpractice.CareersUMTC@62ee68d8]" name="lumagda" duration-ms="6079" started-at="2019-07-15T11:25:22Z" finished-at="2019-07-15T11:25:28Z">
+        <test-method status="PASS" signature="lumagda()[pri:0, instance:umtcpractice.TimelineExpress@62ee68d8]" name="lumagda" duration-ms="9412" started-at="2019-07-16T14:51:45Z" finished-at="2019-07-16T14:51:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lumagda -->
-        <test-method status="PASS" signature="careers()[pri:1, instance:umtcpractice.CareersUMTC@62ee68d8]" name="careers" duration-ms="47509" started-at="2019-07-15T11:25:28Z" finished-at="2019-07-15T11:26:15Z">
+        <test-method status="PASS" signature="timeline()[pri:1, instance:umtcpractice.TimelineExpress@62ee68d8]" name="timeline" duration-ms="28466" started-at="2019-07-16T14:51:54Z" finished-at="2019-07-16T14:52:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- careers -->
-      </class> <!-- umtcpractice.CareersUMTC -->
+        </test-method> <!-- timeline -->
+      </class> <!-- umtcpractice.TimelineExpress -->
     </test> <!-- Careers UMTC -->
   </suite> <!-- Suite -->
 </testng-results>
