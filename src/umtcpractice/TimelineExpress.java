@@ -1,5 +1,6 @@
 package umtcpractice;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -25,7 +26,7 @@ public class TimelineExpress extends VariablesAndBrowser {
 	
 	
 	@Test(priority = 1)
-	public void timeline() throws InterruptedException {
+	public void timeline() throws InterruptedException, IOException {
 		
 	
 	WebElement timeline = driver.findElement(By.partialLinkText("Timeline"));
@@ -57,8 +58,27 @@ public class TimelineExpress extends VariablesAndBrowser {
 	Thread.sleep(5000);
 	je.executeScript("arguments[0].click();", element);
 	
+	//Datapicker
+	driver.findElement(By.id("announcement_date")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"10/18/2019");
+	Thread.sleep(3000);
 	
-	//driver.findElement(By.partialLinkText("align")).click();
+	//UploadFiles
+	driver.findElement(By.cssSelector("#cmb2-metabox-announcement_metabox > div.cmb-row.cmb-type-file.cmb2-id-announcement-image > div.cmb-td > input.cmb2-upload-button.button")).click();
+	Thread.sleep(3000);
+	driver.findElement(By.partialLinkText("Upload")).click();
+	Thread.sleep(3000);
+	driver.findElement(By.id("__wp-uploader-id-1")).click();
+	Runtime.getRuntime().exec("C:\\Users\\DICE205\\Documents\\Uploadfilesintimeline.exe");
+	Thread.sleep(5000);
+	driver.findElement(By.cssSelector("#__wp-uploader-id-0 > div.media-frame-toolbar > div > div.media-toolbar-primary.search-form > button")).click();
+	System.out.println("Successfully Uploaded");
+	
+	Thread.sleep(5000);
+	 
+
+	driver.findElement(By.id("publish")).click();
+	Thread.sleep(5000);
+	driver.findElement(By.cssSelector("#post-preview")).click();
 	
 	}
 }

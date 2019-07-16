@@ -2,14 +2,14 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="47045" started-at="2019-07-16T06:51:35Z" finished-at="2019-07-16T06:52:22Z">
+  <suite name="Suite" duration-ms="78881" started-at="2019-07-16T07:06:05Z" finished-at="2019-07-16T07:07:24Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="4" started-at="2019-07-16T06:51:35Z" finished-at="2019-07-16T06:51:35Z">
+    <test name="Test" duration-ms="8" started-at="2019-07-16T07:06:05Z" finished-at="2019-07-16T07:06:05Z">
     </test> <!-- Test -->
-    <test name="Careers UMTC" duration-ms="47007" started-at="2019-07-16T06:51:35Z" finished-at="2019-07-16T06:52:22Z">
+    <test name="Careers UMTC" duration-ms="78840" started-at="2019-07-16T07:06:05Z" finished-at="2019-07-16T07:07:24Z">
       <class name="umtcpractice.TimelineExpress">
-        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.TimelineExpress@62ee68d8]" name="MultipleBrowser" is-config="true" duration-ms="9117" started-at="2019-07-16T14:51:35Z" finished-at="2019-07-16T14:51:45Z">
+        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.TimelineExpress@62ee68d8]" name="MultipleBrowser" is-config="true" duration-ms="10136" started-at="2019-07-16T15:06:05Z" finished-at="2019-07-16T15:06:15Z">
           <params>
             <param index="0">
               <value>
@@ -20,11 +20,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultipleBrowser -->
-        <test-method status="PASS" signature="lumagda()[pri:0, instance:umtcpractice.TimelineExpress@62ee68d8]" name="lumagda" duration-ms="9412" started-at="2019-07-16T14:51:45Z" finished-at="2019-07-16T14:51:54Z">
+        <test-method status="PASS" signature="lumagda()[pri:0, instance:umtcpractice.TimelineExpress@62ee68d8]" name="lumagda" duration-ms="9325" started-at="2019-07-16T15:06:15Z" finished-at="2019-07-16T15:06:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lumagda -->
-        <test-method status="PASS" signature="timeline()[pri:1, instance:umtcpractice.TimelineExpress@62ee68d8]" name="timeline" duration-ms="28466" started-at="2019-07-16T14:51:54Z" finished-at="2019-07-16T14:52:22Z">
+        <test-method status="PASS" signature="timeline()[pri:1, instance:umtcpractice.TimelineExpress@62ee68d8]" name="timeline" duration-ms="59366" started-at="2019-07-16T15:06:25Z" finished-at="2019-07-16T15:07:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- timeline -->
