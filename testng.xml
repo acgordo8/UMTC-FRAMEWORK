@@ -15,7 +15,7 @@
 	<test name="Careers UMTC">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="umtcpractice.Appearance" />
+			<class name="umtcpractice.CertificateUMTC" />
 		</classes>
 	</test>
 
