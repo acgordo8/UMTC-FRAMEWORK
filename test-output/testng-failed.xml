@@ -5,13 +5,12 @@
   <test name="Careers UMTC(failed)" parallel="none">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="umtcpractice.DownloadsUMTC">
+      <class name="umtcpractice.Appearance">
         <methods>
-          <include name="lumagda"/>
           <include name="MultipleBrowser"/>
-          <include name="downloads"/>
+          <include name="appearance"/>
         </methods>
-      </class> <!-- umtcpractice.DownloadsUMTC -->
+      </class> <!-- umtcpractice.Appearance -->
     </classes>
   </test> <!-- Careers UMTC(failed) -->
 </suite> <!-- Failed suite [Suite] -->
