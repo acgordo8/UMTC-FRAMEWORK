@@ -2,14 +2,14 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="77141" started-at="2019-07-17T01:05:10Z" finished-at="2019-07-17T01:06:27Z">
+  <suite name="Suite" duration-ms="59475" started-at="2019-07-17T01:27:17Z" finished-at="2019-07-17T01:28:16Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="4" started-at="2019-07-17T01:05:10Z" finished-at="2019-07-17T01:05:10Z">
+    <test name="Test" duration-ms="13" started-at="2019-07-17T01:27:17Z" finished-at="2019-07-17T01:27:17Z">
     </test> <!-- Test -->
-    <test name="Careers UMTC" duration-ms="77094" started-at="2019-07-17T01:05:10Z" finished-at="2019-07-17T01:06:27Z">
-      <class name="umtcpractice.FacilitiesUMTC">
-        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.FacilitiesUMTC@62ee68d8]" name="MultipleBrowser" is-config="true" duration-ms="8666" started-at="2019-07-17T09:05:10Z" finished-at="2019-07-17T09:05:18Z">
+    <test name="Careers UMTC" duration-ms="59386" started-at="2019-07-17T01:27:17Z" finished-at="2019-07-17T01:28:16Z">
+      <class name="umtcpractice.DownloadsUMTC">
+        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.DownloadsUMTC@8646db9]" name="MultipleBrowser" is-config="true" duration-ms="13769" started-at="2019-07-17T09:27:17Z" finished-at="2019-07-17T09:27:30Z">
           <params>
             <param index="0">
               <value>
@@ -20,15 +20,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultipleBrowser -->
-        <test-method status="PASS" signature="lumagda()[pri:0, instance:umtcpractice.FacilitiesUMTC@62ee68d8]" name="lumagda" duration-ms="7118" started-at="2019-07-17T09:05:18Z" finished-at="2019-07-17T09:05:25Z">
+        <test-method status="PASS" signature="lumagda()[pri:0, instance:umtcpractice.DownloadsUMTC@8646db9]" name="lumagda" duration-ms="12015" started-at="2019-07-17T09:27:30Z" finished-at="2019-07-17T09:27:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lumagda -->
-        <test-method status="PASS" signature="Addfacilities()[pri:1, instance:umtcpractice.FacilitiesUMTC@62ee68d8]" name="Addfacilities" duration-ms="61290" started-at="2019-07-17T09:05:25Z" depends-on-methods="umtcpractice.FacilitiesUMTC.lumagda" finished-at="2019-07-17T09:06:27Z">
+        <test-method status="PASS" signature="downloads()[pri:1, instance:umtcpractice.DownloadsUMTC@8646db9]" name="downloads" duration-ms="33588" started-at="2019-07-17T09:27:42Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-07-17T09:28:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Addfacilities -->
-      </class> <!-- umtcpractice.FacilitiesUMTC -->
+        </test-method> <!-- downloads -->
+      </class> <!-- umtcpractice.DownloadsUMTC -->
     </test> <!-- Careers UMTC -->
   </suite> <!-- Suite -->
 </testng-results>

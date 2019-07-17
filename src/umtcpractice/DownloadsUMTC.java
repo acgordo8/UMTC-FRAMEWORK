@@ -13,11 +13,11 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 	
 	
 	//File upload using Sikuli framework
-	String filepath = "C:\\Users\\ajgor\\Downloads\\";
-	String inputFilePath = "C:\\Users\\ajgor\\Downloads\\";
+	String filepath = "C:\\Users\\DICE205\\Downloads\\";
+	String inputFilePath = "C:\\Users\\DICE205\\Downloads\\";
 	Screen s = new Screen();
-    Pattern fileInputTextBox = new Pattern(filepath + "filetextbox.PNG");
-    Pattern openButton = new Pattern(filepath + "Open.PNG");
+    Pattern fileInputTextBox = new Pattern(filepath + "filetextbox.JPG");
+    Pattern openButton = new Pattern(filepath + "Open.JPG");
 	
 	
 	@Test(priority = 0)
@@ -50,7 +50,7 @@ public void downloads() throws InterruptedException, FindFailed {
 		//Select Files
 		driver.findElement(By.id("file-upload")).click();
 		        s.wait(fileInputTextBox, 20);
-		        s.type(fileInputTextBox, inputFilePath + "download.JPG");
+		        s.type(fileInputTextBox, inputFilePath + "index.JPG");
 		        s.click(openButton);
 		Thread.sleep(3000);
 		
