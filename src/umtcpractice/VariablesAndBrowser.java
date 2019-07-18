@@ -51,7 +51,6 @@ public WebDriver driver;
 			driver.get(website);
 			driver.manage().window().maximize();
 			            
-		    
 		}
 	}
 }

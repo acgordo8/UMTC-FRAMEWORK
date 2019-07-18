@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="umtcpractice.CareersUMTC">
+      <class name="umtcpractice.ExtentReport">
         <methods>
-          <include name="lumagda"/>
-          <include name="careers"/>
+          <include name="extentReportsDemo"/>
+          <include name="starttest"/>
         </methods>
-      </class> <!-- umtcpractice.CareersUMTC -->
+      </class> <!-- umtcpractice.ExtentReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

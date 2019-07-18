@@ -15,7 +15,11 @@
 	<test name="Careers UMTC">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="umtcpractice.CertificateUMTC" />
+			<class name="umtcpractice.ExtentReport" />
+			<method>
+				<include name=""/> <!-- use this if you want to test specific test in a class -->
+									<!--you can use exclude if you want not to include or enabled = false in classes  -->
+			</method>
 		</classes>
 	</test>
 

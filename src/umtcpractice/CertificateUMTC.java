@@ -10,9 +10,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class CertificateUMTC extends VariablesAndBrowser{
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
-	
+public class CertificateUMTC extends VariablesAndBrowser{
+		
+		
+		
 	@Test(priority = 0)
 	public void lumagda() throws InterruptedException {
 		driver.findElement(By.id("user_login")).sendKeys("umtc_admin");
