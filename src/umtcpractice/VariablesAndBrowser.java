@@ -15,7 +15,7 @@ public WebDriver driver;
 	
 
 	String website = new String ("https://umtc.dice205.asia/wp-login.php");
-	String ChromePATH = new String ("F:\\Eclipse Installer\\chromedriver_win32\\chromedriver.exe");
+	String ChromePATH = new String ("C:\\Users\\DICE205\\Documents\\chromedriver_win32 (1)\\chromedriver.exe");
 	String ChromeBIN = new String ("webdriver.chrome.driver");
 	String Home = new String ("");
 	String ABOUTUS = new String ("");

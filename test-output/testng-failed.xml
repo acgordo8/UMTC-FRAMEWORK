@@ -3,12 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="umtcpractice.ExtentReport">
+      <class name="umtcpractice.DownloadsUMTC">
         <methods>
-          <include name="extentReportsDemo"/>
-          <include name="starttest"/>
+          <include name="lumagda"/>
+          <include name="ExtentBeforeTest"/>
+          <include name="downloads"/>
+          <include name="setupClass"/>
         </methods>
-      </class> <!-- umtcpractice.ExtentReport -->
+      </class> <!-- umtcpractice.DownloadsUMTC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

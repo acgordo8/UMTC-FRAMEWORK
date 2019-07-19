@@ -1,34 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="1" failed="1" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="19978" started-at="2019-07-18T06:13:44Z" finished-at="2019-07-18T06:14:04Z">
+  <suite name="Default suite" duration-ms="4071" started-at="2019-07-19T03:48:57Z" finished-at="2019-07-19T03:49:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="3" started-at="2019-07-18T06:13:44Z" finished-at="2019-07-18T06:13:44Z">
-    </test> <!-- Test -->
-    <test name="Careers UMTC" duration-ms="19944" started-at="2019-07-18T06:13:44Z" finished-at="2019-07-18T06:14:04Z">
-      <class name="umtcpractice.ExtentReport">
-        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.ExtentReport@5b275dab]" name="MultipleBrowser" is-config="true" duration-ms="8531" started-at="2019-07-18T14:13:44Z" finished-at="2019-07-18T14:13:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="4071" started-at="2019-07-19T03:48:57Z" finished-at="2019-07-19T03:49:01Z">
+      <class name="umtcpractice.DownloadsUMTC">
+        <test-method status="PASS" signature="ExtentBeforeTest()[pri:0, instance:umtcpractice.DownloadsUMTC@782663d3]" name="ExtentBeforeTest" is-config="true" duration-ms="176" started-at="2019-07-19T11:48:57Z" finished-at="2019-07-19T11:48:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MultipleBrowser -->
-        <test-method status="PASS" signature="starttest()[pri:0, instance:umtcpractice.ExtentReport@5b275dab]" name="starttest" duration-ms="197" started-at="2019-07-18T14:13:52Z" finished-at="2019-07-18T14:13:52Z">
+        </test-method> <!-- ExtentBeforeTest -->
+        <test-method status="PASS" signature="setupClass()[pri:0, instance:umtcpractice.DownloadsUMTC@782663d3]" name="setupClass" is-config="true" duration-ms="3880" started-at="2019-07-19T11:48:57Z" finished-at="2019-07-19T11:49:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- starttest -->
-        <test-method status="PASS" signature="extentReportsDemo()[pri:1, instance:umtcpractice.ExtentReport@5b275dab]" name="extentReportsDemo" duration-ms="11204" started-at="2019-07-18T14:13:52Z" finished-at="2019-07-18T14:14:04Z">
+        </test-method> <!-- setupClass -->
+        <test-method status="FAIL" signature="lumagda()[pri:0, instance:umtcpractice.DownloadsUMTC@782663d3]" name="lumagda" duration-ms="4" started-at="2019-07-19T11:49:01Z" finished-at="2019-07-19T11:49:01Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at umtcpractice.DownloadsUMTC.lumagda(DownloadsUMTC.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- extentReportsDemo -->
-      </class> <!-- umtcpractice.ExtentReport -->
-    </test> <!-- Careers UMTC -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- lumagda -->
+        <test-method status="SKIP" signature="downloads()[pri:1, instance:umtcpractice.DownloadsUMTC@782663d3]" name="downloads" duration-ms="1" started-at="2019-07-19T11:49:01Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-07-19T11:49:01Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method DownloadsUMTC.downloads()[pri:1, instance:umtcpractice.DownloadsUMTC@782663d3] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method DownloadsUMTC.downloads()[pri:1, instance:umtcpractice.DownloadsUMTC@782663d3] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloads -->
+      </class> <!-- umtcpractice.DownloadsUMTC -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
