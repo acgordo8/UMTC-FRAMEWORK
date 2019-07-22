@@ -2,18 +2,18 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="51488" started-at="2019-07-22T02:31:05Z" finished-at="2019-07-22T02:31:56Z">
+  <suite name="Suite" duration-ms="35769" started-at="2019-07-22T06:11:43Z" finished-at="2019-07-22T06:12:19Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="4" started-at="2019-07-22T02:31:05Z" finished-at="2019-07-22T02:31:05Z">
+    <test name="Test" duration-ms="5" started-at="2019-07-22T06:11:43Z" finished-at="2019-07-22T06:11:43Z">
     </test> <!-- Test -->
-    <test name="Downloads UMTC" duration-ms="51459" started-at="2019-07-22T02:31:05Z" finished-at="2019-07-22T02:31:56Z">
+    <test name="Downloads UMTC" duration-ms="35722" started-at="2019-07-22T06:11:43Z" finished-at="2019-07-22T06:12:19Z">
       <class name="umtcpractice.DownloadsUMTC">
-        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="BeforeTest" is-config="true" duration-ms="159" started-at="2019-07-22T10:31:05Z" finished-at="2019-07-22T10:31:05Z">
+        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="BeforeTest" is-config="true" duration-ms="218" started-at="2019-07-22T14:11:43Z" finished-at="2019-07-22T14:11:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="MultipleBrowser" is-config="true" duration-ms="7295" started-at="2019-07-22T10:31:05Z" finished-at="2019-07-22T10:31:12Z">
+        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="MultipleBrowser" is-config="true" duration-ms="7471" started-at="2019-07-22T14:11:43Z" finished-at="2019-07-22T14:11:51Z">
           <params>
             <param index="0">
               <value>
@@ -24,11 +24,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultipleBrowser -->
-        <test-method status="PASS" signature="lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@df27fae]" name="lumagda" duration-ms="7023" started-at="2019-07-22T10:31:12Z" finished-at="2019-07-22T10:31:19Z">
+        <test-method status="PASS" signature="lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@df27fae]" name="lumagda" duration-ms="7312" started-at="2019-07-22T14:11:51Z" finished-at="2019-07-22T14:11:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lumagda -->
-        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="CheckResults" is-config="true" duration-ms="0" started-at="2019-07-22T10:31:19Z" finished-at="2019-07-22T10:31:19Z">
+        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="CheckResults" is-config="true" duration-ms="0" started-at="2019-07-22T14:11:58Z" finished-at="2019-07-22T14:11:58Z">
           <params>
             <param index="0">
               <value>
@@ -39,11 +39,45 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckResults -->
-        <test-method status="FAIL" signature="downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@df27fae]" name="downloads" duration-ms="36759" started-at="2019-07-22T10:31:19Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-07-22T10:31:56Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@df27fae]" name="downloads" duration-ms="20107" started-at="2019-07-22T14:11:58Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-07-22T14:12:18Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Downloadss"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'LAPTOP-RC74JETD', ip: '192.168.1.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51646}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}), userDataDir=C:\Users\DICE205\AppData\Local\Temp\scoped_dir4136_29971}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.142, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 9c1e7e62ec330daf4305b729e0c1b823
+*** Element info: {Using=link text, value=Downloadss}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at umtcpractice.DownloadsUMTC.downloads(DownloadsUMTC.java:104)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Downloadss"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'LAPTOP-RC74JETD', ip: '192.168.1.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51646}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}), userDataDir=C:\Users\DICE205\AppData\Local\Temp\scoped_dir4136_29971}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.142, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 9c1e7e62ec330daf4305b729e0c1b823
+*** Element info: {Using=link text, value=Downloadss}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at umtcpractice.DownloadsUMTC.downloads(DownloadsUMTC.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -70,11 +104,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- downloads -->
-        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="CheckResults" is-config="true" duration-ms="2" started-at="2019-07-22T10:31:56Z" finished-at="2019-07-22T10:31:56Z">
+        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="CheckResults" is-config="true" duration-ms="593" started-at="2019-07-22T14:12:18Z" finished-at="2019-07-22T14:12:19Z">
           <params>
             <param index="0">
               <value>
@@ -85,7 +119,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckResults -->
-        <test-method status="PASS" signature="AfterTest()[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="AfterTest" is-config="true" duration-ms="208" started-at="2019-07-22T10:31:56Z" finished-at="2019-07-22T10:31:56Z">
+        <test-method status="PASS" signature="AfterTest()[pri:0, instance:umtcpractice.DownloadsUMTC@df27fae]" name="AfterTest" is-config="true" duration-ms="2578" started-at="2019-07-22T14:12:19Z" finished-at="2019-07-22T14:12:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTest -->

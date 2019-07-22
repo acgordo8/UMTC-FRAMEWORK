@@ -1,6 +1,7 @@
 package umtcpractice;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,6 +14,7 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -58,6 +60,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 	@Test(priority = 1)
 	public void lumagda() {
 		
+		test = report.startTest("captureScreenshot");
 		test = report.startTest("Login Users");
 		test.log(LogStatus.INFO, "Enter Username");
 		driver.findElement(By.id("user_login")).sendKeys("umtc_admin");
@@ -78,7 +81,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 	public void downloads() throws InterruptedException, FindFailed {
 		test = report.startTest("Automating Downloads");
 		test.log(LogStatus.INFO, "Hover Downloads");
-		WebElement download = driver.findElement(By.linkText("Downloads"));
+		WebElement download = driver.findElement(By.linkText("Downloadss"));
 		Actions action = new Actions(driver);
 		action.moveToElement(download).build().perform();
 		Thread.sleep(3000);
@@ -109,23 +112,23 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 
 	}
 	
-	@AfterTest
-	public void AfterTest() {
-		report.endTest(test);
-		report.flush();
-	}
-
 	@AfterMethod
-	public void CheckResults(ITestResult testResults) {
+	public void CheckResults(ITestResult testResults) throws IOException {
 
 		if (testResults.getStatus() == ITestResult.FAILURE) {
-			test.log(LogStatus.FAIL, "Test Case Failed because of below poblem");
+			String screenShotPath = GetScreenShot.capture(driver,"screenShotName");
 			test.log(LogStatus.FAIL, testResults.getThrowable());
-		} else if (testResults.getStatus() == ITestResult.SUCCESS) {
-			test.log(LogStatus.PASS, "Test Case is passed");
-		} else if (testResults.getStatus() == ITestResult.SKIP) {
-			test.log(LogStatus.SKIP, testResults.getThrowable());
-		}
+			test.log(LogStatus.FAIL, "Test Case Failed because of below poblem" + test.addScreenCapture(screenShotPath));
+			
+		} 
+		
+	
+	}
+	
+	@AfterSuite
+	public void AfterTest() {
+		report.flush();
+		report.close();
 	}
 	
 	
