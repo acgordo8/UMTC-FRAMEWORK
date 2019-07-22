@@ -20,7 +20,7 @@
         <reportName>UMTC Report</reportName>
         
         <!-- report headline - displayed at top-nav, after reportHeadline -->
-        <reportHeadline>SampleNumber1</reportHeadline>
+        <reportHeadline>Test Suite</reportHeadline>
         
         <!-- global date format override -->
         <!-- defaults to yyyy-MM-dd -->

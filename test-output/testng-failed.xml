@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <parameter name="browser" value="chrome"/>
+  <test name="Downloads UMTC(failed)" parallel="none">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="umtcpractice.DownloadsUMTC">
         <methods>
           <include name="lumagda"/>
-          <include name="ExtentBeforeTest"/>
+          <include name="MultipleBrowser"/>
+          <include name="BeforeTest"/>
           <include name="downloads"/>
-          <include name="setupClass"/>
+          <include name="CheckResults"/>
+          <include name="AfterTest"/>
         </methods>
       </class> <!-- umtcpractice.DownloadsUMTC -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Downloads UMTC(failed) -->
+</suite> <!-- Failed suite [Suite] -->

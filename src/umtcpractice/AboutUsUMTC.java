@@ -1,15 +1,25 @@
 package umtcpractice;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class AboutUsUMTC extends VariablesAndBrowser{
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
+public class AboutUsUMTC extends DownloadsUMTC{
+
+	public WebDriver driver;
+	ExtentReports report;
+	ExtentTest test;
 	
-	@Test(priority = 0)
+/*	@Test(priority = 0)
 	public void lumagda() throws InterruptedException {
 		driver.findElement(By.id("user_login")).sendKeys("umtc_admin");
 		driver.findElement(By.id("user_pass")).sendKeys("92R2$Hg@d4TYgW3r3x");
@@ -17,8 +27,8 @@ public class AboutUsUMTC extends VariablesAndBrowser{
 		driver.findElement(By.id("wp-submit")).click();
 				
 		Thread.sleep(2000);
-	}	
-	
+	}	*/
+		
 	@Test(priority = 1)
 	public void aboutus() throws InterruptedException {
 		

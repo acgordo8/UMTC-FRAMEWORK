@@ -1,15 +1,28 @@
 package umtcpractice;
 
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 	
 public class VariablesAndBrowser {
 
+	
+	ExtentReports report;
+	ExtentTest test;
 	
 public WebDriver driver;
 	
@@ -48,9 +61,12 @@ public WebDriver driver;
 			/*ChromeOptions options = new ChromeOptions();     
 		    options.addArguments("--headless"); */
 			driver = new ChromeDriver();
+			driver.getWindowHandle();
 			driver.get(website);
 			driver.manage().window().maximize();
 			            
 		}
 	}
+	
+	
 }

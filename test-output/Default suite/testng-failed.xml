@@ -6,9 +6,8 @@
       <class name="umtcpractice.DownloadsUMTC">
         <methods>
           <include name="lumagda"/>
-          <include name="ExtentBeforeTest"/>
+          <include name="BeforeTest"/>
           <include name="downloads"/>
-          <include name="setupClass"/>
         </methods>
       </class> <!-- umtcpractice.DownloadsUMTC -->
     </classes>

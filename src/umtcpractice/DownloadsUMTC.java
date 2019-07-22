@@ -11,6 +11,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -24,11 +27,12 @@ import com.relevantcodes.extentreports.LogStatus;
 import umtcpractice.ExtentFunctions;
 
 
-public class DownloadsUMTC  {
+public class DownloadsUMTC extends VariablesAndBrowser {
 	
-	public WebDriver driver;
-	ExtentReports report = null;
-	ExtentTest test = null;
+	
+	ExtentReports report;
+	ExtentTest test;
+
 
 	
 	//File upload using Sikuli framework
@@ -38,39 +42,21 @@ public class DownloadsUMTC  {
     Pattern fileInputTextBox = new Pattern(filepath + "filetextbox.JPG");
     Pattern openButton = new Pattern(filepath + "Open.JPG");
     
- 
-    @BeforeClass
-    public void setupClass() {
-    	// Initialize browser
-    	WebDriver driver =new ChromeDriver();
-    	 
-    }
-    
-    @BeforeTest
-    public void ExtentBeforeTest() {
-    	
-    	ExtentFunctions delete = new ExtentFunctions();   //delete existing report
-		delete.DeleteExtentReport();
-		
-		report = ExtentFunctions.getInstance();
-		report.loadConfig(new File("C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\extent-config.xml")); 
-		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DICE205\\Documents\\chromedriver_win32 (1)\\chromedriver.exe");
-   	 
-		// Open facebook
-    	driver.get("https://umtc.dice205.asia/wp-login.php");
-    	 
-    	// Maximize browser
-    	 
-    	driver.manage().window().maximize();
-
-    }
 	
-	@Test(priority = 0)
-	public void lumagda() {
-		
+	@BeforeTest
+	public void BeforeTest() {	
+			ExtentFunctions delete = new ExtentFunctions();   //delete existing extent-report 
+			delete.DeleteExtentReport();
+			
+			
+			report = ExtentFunctions.getInstance();
+			report.loadConfig(new File("C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\extent-config.xml")); // Assigned to
+																								// xampp/htdocs/PBAL-Automationextent-config	
+	}
 
-    	
+   
+	@Test(priority = 1)
+	public void lumagda() {
 		
 		test = report.startTest("Login Users");
 		test.log(LogStatus.INFO, "Enter Username");
@@ -88,33 +74,60 @@ public class DownloadsUMTC  {
     
     
 	
-	@Test (priority = 1, dependsOnMethods= {"lumagda"})
+	@Test (priority = 2, dependsOnMethods= {"lumagda"})
 	public void downloads() throws InterruptedException, FindFailed {
-		
+		test = report.startTest("Automating Downloads");
+		test.log(LogStatus.INFO, "Hover Downloads");
 		WebElement download = driver.findElement(By.linkText("Downloads"));
 		Actions action = new Actions(driver);
 		action.moveToElement(download).build().perform();
 		Thread.sleep(3000);
+
+		test.log(LogStatus.INFO, "Click Add new");
 		driver.findElement(By.xpath("//*[@id=\"menu-posts-download\"]/ul/li[3]/a")).click();
 		
-		
+		test.log(LogStatus.INFO, "Inputing Text in TextField");
 		driver.findElement(By.id("title")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Welcome UMTC");
 		Thread.sleep(3000);
 		
 		
 		
 		//Select Files
+		test.log(LogStatus.INFO, "Click File Upload");
 		driver.findElement(By.id("file-upload")).click();
 		        s.wait(fileInputTextBox, 20);
 		        s.type(fileInputTextBox, inputFilePath + "index.JPG");
 		        s.click(openButton);
 		Thread.sleep(3000);
 		
+		test.log(LogStatus.INFO, "Clicking Publish");
 		driver.findElement(By.id("publish")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.id("post-preview")).click();
-		      
+		//test.log(LogStatus.INFO, "Clicking Preview");
+		//driver.findElement(By.id("post-preview")).click();
+	
 
 	}
+	
+	@AfterTest
+	public void AfterTest() {
+		report.endTest(test);
+		report.flush();
+	}
+
+	@AfterMethod
+	public void CheckResults(ITestResult testResults) {
+
+		if (testResults.getStatus() == ITestResult.FAILURE) {
+			test.log(LogStatus.FAIL, "Test Case Failed because of below poblem");
+			test.log(LogStatus.FAIL, testResults.getThrowable());
+		} else if (testResults.getStatus() == ITestResult.SUCCESS) {
+			test.log(LogStatus.PASS, "Test Case is passed");
+		} else if (testResults.getStatus() == ITestResult.SKIP) {
+			test.log(LogStatus.SKIP, testResults.getThrowable());
+		}
+	}
+	
+	
 
 }

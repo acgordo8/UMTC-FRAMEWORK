@@ -2,14 +2,25 @@ package umtcpractice;
 
 import java.io.File;
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+
 import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 
 
 
 public class ExtentFunctions {
 
-	
+
+	ExtentReports report;
+	ExtentTest test;
 	
 	//Delete first the existing UMTC_REPORTS.html before creating new one
 		public void DeleteExtentReport() {
@@ -30,4 +41,6 @@ public class ExtentFunctions {
 			System.out.println("New UMTC_REPORTS.html will be created after executions of the test cases");
 			return extent;
 		}
+		
+
 }

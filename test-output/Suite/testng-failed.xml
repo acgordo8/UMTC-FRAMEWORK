@@ -2,16 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <parameter name="browser" value="chrome"/>
-  <test name="Careers UMTC(failed)" parallel="none">
+  <test name="Downloads UMTC(failed)" parallel="none">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="umtcpractice.CareersUMTC">
+      <class name="umtcpractice.DownloadsUMTC">
         <methods>
-          <include name="MultipleBrowser"/>
           <include name="lumagda"/>
-          <include name="careers"/>
+          <include name="MultipleBrowser"/>
+          <include name="BeforeTest"/>
+          <include name="downloads"/>
+          <include name="CheckResults"/>
+          <include name="AfterTest"/>
         </methods>
-      </class> <!-- umtcpractice.CareersUMTC -->
+      </class> <!-- umtcpractice.DownloadsUMTC -->
     </classes>
-  </test> <!-- Careers UMTC(failed) -->
+  </test> <!-- Downloads UMTC(failed) -->
 </suite> <!-- Failed suite [Suite] -->
