@@ -49,6 +49,10 @@ public void BeforeClass() {
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\DICE205\\Documents\\chromedriver_win32 (1)\\chromedriver.exe");
 	
 
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("disable-infobars");
+	options.addArguments("--print-to-pdf");
+
 	driver = new ChromeDriver();
 	driver.getWindowHandle();
 	driver.manage().window().maximize();

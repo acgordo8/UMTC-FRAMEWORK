@@ -1,6 +1,7 @@
 package umtcpractice;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
@@ -14,6 +15,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -28,15 +33,19 @@ public class ExtentFunctions {
 	ExtentTest test;
 	
 	
-	public static String capture(WebDriver driver, String screenShotName) throws IOException
+	public static String capture(WebDriver driver, String screenShotName) throws IOException, DocumentException
 	{
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		String dest = System.getProperty("user.dir") +"\\Screenshot\\" + screenShotName+".png";
+		Document document = new Document(PageSize.A4, 20, 20, 20, 0);
+		PdfWriter.getInstance(document, new FileOutputStream("webaspdf.pdf"));
+	    document.open();
 		File destination = new File(dest);
 		FileUtils.copyFile(source, destination);
-		
+		document.close();
 		return dest;
+		
 	}
 	
 	//Delete first the existing UMTC_REPORTS.html before creating new one
