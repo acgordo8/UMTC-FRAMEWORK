@@ -2,10 +2,12 @@ package umtcpractice;
 
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.monte.media.Format;
 import org.monte.media.FormatKeys.MediaType;
 import org.monte.media.math.Rational;
 import org.monte.screenrecorder.ScreenRecorder;
@@ -36,7 +38,8 @@ import umtcpractice.ExtentFunctions;
 
 public class DownloadsUMTC extends VariablesAndBrowser {
 	
-	public ScreenRecorder screenRecorder;
+	
+	
 	ExtentReports report;
 	ExtentTest test;
 
@@ -64,9 +67,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
    
 	@Test(priority = 1)
 	public void lumagda() throws Exception {
-		DownloadsUMTC videoRecord = new DownloadsUMTC();
-
-		videoRecord.startRecording(); //Started recording
+		
 		test = report.startTest("Login Users");
 		test.log(LogStatus.INFO, "Enter Username");
 		driver.findElement(By.id("user_login")).sendKeys("umtc_admin");
@@ -132,27 +133,6 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 	
 		report.flush();
 	}
-	
-	private void startRecording() throws Exception
-	{
-		GraphicsConfiguration gc = GraphicsEnvironment
-		.getLocalGraphicsEnvironment()
-		.getDefaultScreenDevice()
-		.getDefaultConfiguration();
-		
-		this.screenRecorder = new ScreenRecorder
-				(gc);
-				this.screenRecorder.start();
-		
-
-		
-		}
-
-		public void stopRecording() throws Exception
-		{
-		this.screenRecorder.stop();
-		}
-	
 	
 
 }

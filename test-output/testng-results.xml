@@ -2,18 +2,18 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="44490" started-at="2019-07-23T03:58:23Z" finished-at="2019-07-23T03:59:07Z">
+  <suite name="Suite" duration-ms="35822" started-at="2019-07-23T06:09:51Z" finished-at="2019-07-23T06:10:27Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="4" started-at="2019-07-23T03:58:23Z" finished-at="2019-07-23T03:58:23Z">
+    <test name="Test" duration-ms="5" started-at="2019-07-23T06:09:51Z" finished-at="2019-07-23T06:09:51Z">
     </test> <!-- Test -->
-    <test name="Downloads UMTC" duration-ms="44460" started-at="2019-07-23T03:58:23Z" finished-at="2019-07-23T03:59:07Z">
+    <test name="Downloads UMTC" duration-ms="35790" started-at="2019-07-23T06:09:51Z" finished-at="2019-07-23T06:10:27Z">
       <class name="umtcpractice.DownloadsUMTC">
-        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="BeforeTest" is-config="true" duration-ms="154" started-at="2019-07-23T11:58:23Z" finished-at="2019-07-23T11:58:23Z">
+        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="BeforeTest" is-config="true" duration-ms="169" started-at="2019-07-23T14:09:51Z" finished-at="2019-07-23T14:09:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="MultipleBrowser" is-config="true" duration-ms="7527" started-at="2019-07-23T11:58:23Z" finished-at="2019-07-23T11:58:30Z">
+        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="MultipleBrowser" is-config="true" duration-ms="6374" started-at="2019-07-23T14:09:51Z" finished-at="2019-07-23T14:09:58Z">
           <params>
             <param index="0">
               <value>
@@ -24,11 +24,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultipleBrowser -->
-        <test-method status="PASS" signature="lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@376b4233]" name="lumagda" duration-ms="8199" started-at="2019-07-23T11:58:30Z" finished-at="2019-07-23T11:58:38Z">
+        <test-method status="PASS" signature="lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@376b4233]" name="lumagda" duration-ms="8327" started-at="2019-07-23T14:09:58Z" finished-at="2019-07-23T14:10:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lumagda -->
-        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="CheckResults" is-config="true" duration-ms="278" started-at="2019-07-23T11:58:38Z" finished-at="2019-07-23T11:58:39Z">
+        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="CheckResults" is-config="true" duration-ms="188" started-at="2019-07-23T14:10:06Z" finished-at="2019-07-23T14:10:06Z">
           <params>
             <param index="0">
               <value>
@@ -39,11 +39,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckResults -->
-        <test-method status="PASS" signature="downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@376b4233]" name="downloads" duration-ms="28229" started-at="2019-07-23T11:58:39Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-07-23T11:59:07Z">
+        <test-method status="PASS" signature="downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@376b4233]" name="downloads" duration-ms="20688" started-at="2019-07-23T14:10:06Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-07-23T14:10:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- downloads -->
-        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="CheckResults" is-config="true" duration-ms="61" started-at="2019-07-23T11:59:07Z" finished-at="2019-07-23T11:59:07Z">
+        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="CheckResults" is-config="true" duration-ms="36" started-at="2019-07-23T14:10:27Z" finished-at="2019-07-23T14:10:27Z">
           <params>
             <param index="0">
               <value>
@@ -54,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckResults -->
-        <test-method status="PASS" signature="aftersuite()[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="aftersuite" is-config="true" duration-ms="1264" started-at="2019-07-23T11:59:07Z" finished-at="2019-07-23T11:59:08Z">
+        <test-method status="PASS" signature="aftersuite()[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="aftersuite" is-config="true" duration-ms="1562" started-at="2019-07-23T14:10:27Z" finished-at="2019-07-23T14:10:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
