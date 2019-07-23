@@ -1,40 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18450" started-at="2019-07-22T09:14:07Z" finished-at="2019-07-22T09:14:25Z">
+  <suite name="Suite" duration-ms="44490" started-at="2019-07-23T03:58:23Z" finished-at="2019-07-23T03:59:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18450" started-at="2019-07-22T09:14:07Z" finished-at="2019-07-22T09:14:25Z">
-      <class name="umtcpractice.SampleExtent">
-        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:umtcpractice.SampleExtent@1b604f19]" name="BeforeTest" is-config="true" duration-ms="213" started-at="2019-07-22T17:14:07Z" finished-at="2019-07-22T17:14:07Z">
+    <test name="Test" duration-ms="4" started-at="2019-07-23T03:58:23Z" finished-at="2019-07-23T03:58:23Z">
+    </test> <!-- Test -->
+    <test name="Downloads UMTC" duration-ms="44460" started-at="2019-07-23T03:58:23Z" finished-at="2019-07-23T03:59:07Z">
+      <class name="umtcpractice.DownloadsUMTC">
+        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="BeforeTest" is-config="true" duration-ms="154" started-at="2019-07-23T11:58:23Z" finished-at="2019-07-23T11:58:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:umtcpractice.SampleExtent@1b604f19]" name="BeforeClass" is-config="true" duration-ms="10702" started-at="2019-07-22T17:14:07Z" finished-at="2019-07-22T17:14:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="Login()[pri:1, instance:umtcpractice.SampleExtent@1b604f19]" name="Login" duration-ms="7052" started-at="2019-07-22T17:14:18Z" finished-at="2019-07-22T17:14:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.SampleExtent@1b604f19]" name="CheckResults" is-config="true" duration-ms="1" started-at="2019-07-22T17:14:25Z" finished-at="2019-07-22T17:14:25Z">
+        <test-method status="PASS" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="MultipleBrowser" is-config="true" duration-ms="7527" started-at="2019-07-23T11:58:23Z" finished-at="2019-07-23T11:58:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login status=SUCCESS method=SampleExtent.Login()[pri:1, instance:umtcpractice.SampleExtent@1b604f19] output={null}]]]>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MultipleBrowser -->
+        <test-method status="PASS" signature="lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@376b4233]" name="lumagda" duration-ms="8199" started-at="2019-07-23T11:58:30Z" finished-at="2019-07-23T11:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lumagda -->
+        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="CheckResults" is-config="true" duration-ms="278" started-at="2019-07-23T11:58:38Z" finished-at="2019-07-23T11:58:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=lumagda status=SUCCESS method=DownloadsUMTC.lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@376b4233] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckResults -->
-        <test-method status="PASS" signature="AfterTest()[pri:0, instance:umtcpractice.SampleExtent@1b604f19]" name="AfterTest" is-config="true" duration-ms="460" started-at="2019-07-22T17:14:25Z" finished-at="2019-07-22T17:14:25Z">
+        <test-method status="PASS" signature="downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@376b4233]" name="downloads" duration-ms="28229" started-at="2019-07-23T11:58:39Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-07-23T11:59:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterTest -->
-      </class> <!-- umtcpractice.SampleExtent -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- downloads -->
+        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="CheckResults" is-config="true" duration-ms="61" started-at="2019-07-23T11:59:07Z" finished-at="2019-07-23T11:59:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=downloads status=SUCCESS method=DownloadsUMTC.downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@376b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckResults -->
+        <test-method status="PASS" signature="aftersuite()[pri:0, instance:umtcpractice.DownloadsUMTC@376b4233]" name="aftersuite" is-config="true" duration-ms="1264" started-at="2019-07-23T11:59:07Z" finished-at="2019-07-23T11:59:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftersuite -->
+      </class> <!-- umtcpractice.DownloadsUMTC -->
+    </test> <!-- Downloads UMTC -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,11 +14,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CareersUMTC extends VariablesAndBrowser {
+public class CareersUMTC  {
 	
+	WebDriver driver;
 	
-	
-	@Test(priority = 0)
+	/*@Test(priority = 0)
 	public void lumagda() throws InterruptedException {
 		driver.findElement(By.id("user_login")).sendKeys("umtc_admin");
 		driver.findElement(By.id("user_pass")).sendKeys("92R2$Hg@d4TYgW3r3x");
@@ -25,7 +26,7 @@ public class CareersUMTC extends VariablesAndBrowser {
 		driver.findElement(By.id("wp-submit")).click();
 				
 		Thread.sleep(2000);
-	}	
+	}	*/
 
 	
 	

@@ -1,9 +1,14 @@
 package umtcpractice;
 
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.math.Rational;
+import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -31,7 +36,7 @@ import umtcpractice.ExtentFunctions;
 
 public class DownloadsUMTC extends VariablesAndBrowser {
 	
-	
+	public ScreenRecorder screenRecorder;
 	ExtentReports report;
 	ExtentTest test;
 
@@ -58,9 +63,10 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 
    
 	@Test(priority = 1)
-	public void lumagda() {
-		
-		test = report.startTest("captureScreenshot");
+	public void lumagda() throws Exception {
+		DownloadsUMTC videoRecord = new DownloadsUMTC();
+
+		videoRecord.startRecording(); //Started recording
 		test = report.startTest("Login Users");
 		test.log(LogStatus.INFO, "Enter Username");
 		driver.findElement(By.id("user_login")).sendKeys("umtc_admin");
@@ -76,12 +82,11 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 	}	
     
     
-	
 	@Test (priority = 2, dependsOnMethods= {"lumagda"})
 	public void downloads() throws InterruptedException, FindFailed {
-		test = report.startTest("Automating Downloads");
+		test = report.startTest("Downloads");
 		test.log(LogStatus.INFO, "Hover Downloads");
-		WebElement download = driver.findElement(By.linkText("Downloadss"));
+		WebElement download = driver.findElement(By.linkText("Downloads"));
 		Actions action = new Actions(driver);
 		action.moveToElement(download).build().perform();
 		Thread.sleep(3000);
@@ -119,17 +124,34 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 			String screenShotPath = GetScreenShot.capture(driver,"screenShotName");
 			test.log(LogStatus.FAIL, testResults.getThrowable());
 			test.log(LogStatus.FAIL, "Test Case Failed because of below poblem" + test.addScreenCapture(screenShotPath));
-			
-		} 
-		
+		}  else if (testResults.getStatus() == ITestResult.SUCCESS) {
+			test.log(LogStatus.PASS, "Test Case is passed");
+		} else if (testResults.getStatus() == ITestResult.SKIP) {
+			test.log(LogStatus.SKIP, testResults.getThrowable());
+		}
 	
-	}
-	
-	@AfterSuite
-	public void AfterTest() {
 		report.flush();
-		report.close();
 	}
+	
+	private void startRecording() throws Exception
+	{
+		GraphicsConfiguration gc = GraphicsEnvironment
+		.getLocalGraphicsEnvironment()
+		.getDefaultScreenDevice()
+		.getDefaultConfiguration();
+		
+		this.screenRecorder = new ScreenRecorder
+				(gc);
+				this.screenRecorder.start();
+		
+
+		
+		}
+
+		public void stopRecording() throws Exception
+		{
+		this.screenRecorder.stop();
+		}
 	
 	
 

@@ -21,10 +21,12 @@ import com.relevantcodes.extentreports.LogStatus;
 public class VariablesAndBrowser {
 
 	
-	ExtentReports report;
-	ExtentTest test;
 	
-public WebDriver driver;
+public static WebDriver driver;
+public static WebDriver getDriver() {
+    return driver;
+}
+
 	
 
 	String website = new String ("https://umtc.dice205.asia/wp-login.php");
@@ -58,15 +60,20 @@ public WebDriver driver;
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 			System.setProperty(ChromeBIN, ChromePATH);
-			/*ChromeOptions options = new ChromeOptions();     
-		    options.addArguments("--headless"); */
+			ChromeOptions options = new ChromeOptions();     
+		    options.addArguments("--headless"); 
 			driver = new ChromeDriver();
-			driver.getWindowHandle();
+			//driver.getWindowHandle();
 			driver.get(website);
-			driver.manage().window().maximize();
+			//driver.manage().window().maximize();
 			            
 		}
 	}
 	
+	@AfterSuite
+	public void aftersuite() {
+		
+		driver.quit();
+	}
 	
 }
