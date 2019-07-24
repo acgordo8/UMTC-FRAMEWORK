@@ -5,7 +5,23 @@ import java.awt.GraphicsEnvironment;
 import java.awt.Rectangle;
 import java.io.File;
 import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 import org.monte.media.Format;
 import org.monte.media.FormatKeys.MediaType;
@@ -61,7 +77,8 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 			
 			report = ExtentFunctions.getInstance();
 			report.loadConfig(new File("C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\extent-config.xml")); // Assigned to
-																								// xampp/htdocs/PBAL-Automationextent-config	
+																					// xampp/htdocs/PBAL-Automationextent-config	
+	
 	}
 
    
@@ -103,7 +120,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 		
 		//Select Files
 		test.log(LogStatus.INFO, "Click File Upload");
-		driver.findElement(By.id("file-upload")).click();
+		driver.findElement(By.id("file-uploads")).click();
 		        s.wait(fileInputTextBox, 20);
 		        s.type(fileInputTextBox, inputFilePath + "index.JPG");
 		        s.click(openButton);
@@ -132,6 +149,56 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 		}
 	
 		report.flush();
+	}
+	
+	@AfterTest
+	public void SendThruEmail() {
+		
+				Properties props = new Properties();
+		 
+				props.put("mail.smtp.host", "smtp.gmail.com");
+				props.put("mail.smtp.port", "587");
+				 props.put("mail.smtp.starttls.enable", true);
+				props.put("mail.smtp.auth", true);
+		 
+				Session session = Session.getDefaultInstance(props,
+		 
+						new javax.mail.Authenticator() {
+	
+							protected PasswordAuthentication getPasswordAuthentication() {
+							return new PasswordAuthentication("ajgordo8@gmail.com", "Gordo481527");
+		 
+							}
+		 
+						});
+		 
+				try {
+					Message message = new MimeMessage(session);
+					message.setFrom(new InternetAddress("ajgordo8@gmail.com"));
+					message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("ajgordo8@gmail.com"));
+					message.setSubject("Testing Subject");
+					BodyPart messageBodyPart1 = new MimeBodyPart();
+					messageBodyPart1.setText("This is message body");
+					
+					MimeBodyPart messageBodyPart2 = new MimeBodyPart();
+					String filename = "C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\test-output\\emailable-report.html";
+					DataSource source = new FileDataSource(filename);
+		 
+					messageBodyPart2.setDataHandler(new DataHandler(source));
+					messageBodyPart2.setFileName(filename);
+					Multipart multipart = new MimeMultipart();
+					multipart.addBodyPart(messageBodyPart2);
+					multipart.addBodyPart(messageBodyPart1);
+					message.setContent(multipart);
+					Transport.send(message);
+		 
+					System.out.println("=====Email Sent=====");
+		 
+				} catch (MessagingException e) {
+		 
+					throw new RuntimeException(e);
+		 
+				}
 	}
 	
 

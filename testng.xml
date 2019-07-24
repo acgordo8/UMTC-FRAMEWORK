@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="none"><!-- change "none" to "tests" for parallel browser testing -->
 										<!-- none meaning one at a time processing of test -->
 											<!-- tests meaning simultaneously processing of test -->
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="tests">
   <!--  
   <test name="Login UMTC">
 		<parameter name="browser" value="chrome" />
@@ -14,18 +14,14 @@
 	-->
 	<test name="Downloads UMTC">
 		<parameter name="browser" value="chrome" />
-		<classes>
+		<classes>	
 			<class name="umtcpractice.DownloadsUMTC" />
 			<method>
 				<include name=""/> <!-- use this if you want to test specific test in a class -->
 									<!--you can use exclude if you want not to include or enabled = false in classes  -->
 			</method>
 		</classes>
-		
-		
-		
 	</test>
-	
 	
 
 	

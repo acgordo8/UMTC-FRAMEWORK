@@ -26,5 +26,7 @@
 	<classpathentry kind="lib" path="C:/Users/DICE205/eclipse-workspace/UMTC/lib/testng-6.9.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DICE205/Documents/itextpdf-5.4.0.jar/itextpdf-5.4.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DICE205/Documents/MonteMedia-0.7.7src-cc/MonteMediaCC/dist/monte-cc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DICE205/Documents/javax.mail-api-1.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DICE205/Downloads/javax.mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
