@@ -38,12 +38,12 @@ public class ExtentFunctions {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		String dest = System.getProperty("user.dir") +"\\Screenshot\\" + screenShotName+".png";
-		Document document = new Document(PageSize.A4, 20, 20, 20, 0);
-		PdfWriter.getInstance(document, new FileOutputStream("webaspdf.pdf"));
-	    document.open();
+		//Document document = new Document(PageSize.A4, 20, 20, 20, 0);
+		//PdfWriter.getInstance(document, new FileOutputStream("webaspdf.pdf"));
+	    //document.open();
 		File destination = new File(dest);
 		FileUtils.copyFile(source, destination);
-		document.close();
+		//document.close();
 		return dest;
 		
 	}

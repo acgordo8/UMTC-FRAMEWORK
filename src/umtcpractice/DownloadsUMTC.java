@@ -120,14 +120,14 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 		
 		//Select Files
 		test.log(LogStatus.INFO, "Click File Upload");
-		driver.findElement(By.id("file-uploads")).click();
+		driver.findElement(By.id("file-upload")).click();
 		        s.wait(fileInputTextBox, 20);
 		        s.type(fileInputTextBox, inputFilePath + "index.JPG");
 		        s.click(openButton);
 		Thread.sleep(3000);
 		
 		test.log(LogStatus.INFO, "Clicking Publish");
-		driver.findElement(By.id("publish")).click();
+		driver.findElement(By.id("publishes")).click();
 		Thread.sleep(2000);
 		//test.log(LogStatus.INFO, "Clicking Preview");
 		//driver.findElement(By.id("post-preview")).click();
@@ -158,7 +158,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 		 
 				props.put("mail.smtp.host", "smtp.gmail.com");
 				props.put("mail.smtp.port", "587");
-				 props.put("mail.smtp.starttls.enable", true);
+				props.put("mail.smtp.starttls.enable", true);
 				props.put("mail.smtp.auth", true);
 		 
 				Session session = Session.getDefaultInstance(props,
@@ -176,12 +176,12 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 					Message message = new MimeMessage(session);
 					message.setFrom(new InternetAddress("ajgordo8@gmail.com"));
 					message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("ajgordo8@gmail.com"));
-					message.setSubject("Testing Subject");
+					message.setSubject("Extent-Reports");
 					BodyPart messageBodyPart1 = new MimeBodyPart();
 					messageBodyPart1.setText("This is message body");
 					
 					MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-					String filename = "C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\test-output\\emailable-report.html";
+					String filename = "C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\test-output\\UMTC_REPORTS.html";
 					DataSource source = new FileDataSource(filename);
 		 
 					messageBodyPart2.setDataHandler(new DataHandler(source));

@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,  4 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,6 +105,35 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="umtcpractice.DownloadsUMTC" hash-for-method="downloads">downloads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="umtcpractice.DownloadsUMTC" hash-for-method="downloads">downloads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="umtcpractice.DownloadsUMTC" hash-for-method="lumagda">lumagda</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="umtcpractice.DownloadsUMTC" hash-for-method="lumagda">lumagda</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -141,31 +170,75 @@
                   <a name="downloads">
                   </a> <!-- downloads -->
                   <span class="method-name">downloads</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;file-uploads&quot;}
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.01 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
-System info: host: &apos;LAPTOP-RC74JETD&apos;, ip: &apos;192.168.0.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:58441}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}), userDataDir=C:\Users\DICE205\AppData\Local\Temp\scoped_dir14644_8193}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.142, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6059169dbfa8dd2f3f3809c680ca0a7c
-*** Element info: {Using=id, value=file-uploads}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at umtcpractice.DownloadsUMTC.downloads(DownloadsUMTC.java:123)
-... Removed 28 stack frames
+                  <div class="stack-trace">FindFailed: C:/Users/DICE205/Downloads/Open.JPG: (94x24) in S(0)[0,0 1366x768] E:Y, T:3.0
+  Line 2761, in file Region.java
+
+	at org.sikuli.script.Region.wait(Region.java:2761)
+	at org.sikuli.script.Region.find(Region.java:2326)
+	at org.sikuli.script.Region.getLocationFromTarget(Region.java:3220)
+	at org.sikuli.script.Region.click(Region.java:3718)
+	at org.sikuli.script.Region.click(Region.java:3703)
+	at umtcpractice.DownloadsUMTC.downloads(DownloadsUMTC.java:126)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">umtcpractice.DownloadsUMTC</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloads">
+                  </a> <!-- downloads -->
+                  <span class="method-name">downloads</span>
+                  <div class="stack-trace">java.lang.Throwable: Method DownloadsUMTC.downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@44f75083] depends on not successfully finished methods
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloads">
+                  </a> <!-- downloads -->
+                  <span class="method-name">downloads</span>
+                  <div class="stack-trace">java.lang.Throwable: Method DownloadsUMTC.downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@73d4cc9e] depends on not successfully finished methods
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="lumagda">
+                  </a> <!-- lumagda -->
+                  <span class="method-name">lumagda</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="lumagda">
+                  </a> <!-- lumagda -->
+                  <span class="method-name">lumagda</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -190,8 +263,8 @@ Session ID: 6059169dbfa8dd2f3f3809c680ca0a7c
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;none&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;tests&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;tests&quot;&gt;
   &lt;/test&gt; &lt;!-- tests --&gt;
   &lt;test name=&quot;Downloads UMTC&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
@@ -199,6 +272,18 @@ Session ID: 6059169dbfa8dd2f3f3809c680ca0a7c
       &lt;class name=&quot;umtcpractice.DownloadsUMTC&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Downloads UMTC --&gt;
+  &lt;test name=&quot;Firefox UMTC&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;umtcpractice.DownloadsUMTC&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Firefox UMTC --&gt;
+  &lt;test name=&quot;Edge UMTC&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;umtcpractice.DownloadsUMTC&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Edge UMTC --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -214,6 +299,12 @@ Session ID: 6059169dbfa8dd2f3f3809c680ca0a7c
               </li>
               <li>
                 <span class="test-name">Downloads UMTC (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Firefox UMTC (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Edge UMTC (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -239,20 +330,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'downloads')
 data.setCell(0, 2, 'umtcpractice.DownloadsUMTC')
-data.setCell(0, 3, 32336);
+data.setCell(0, 3, 15780);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'lumagda')
 data.setCell(1, 2, 'umtcpractice.DownloadsUMTC')
-data.setCell(1, 3, 8695);
+data.setCell(1, 3, 6794);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'lumagda')
+data.setCell(2, 2, 'umtcpractice.DownloadsUMTC')
+data.setCell(2, 3, 2);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'downloads')
+data.setCell(3, 2, 'umtcpractice.DownloadsUMTC')
+data.setCell(3, 3, 0);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'lumagda')
+data.setCell(4, 2, 'umtcpractice.DownloadsUMTC')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'downloads')
+data.setCell(5, 2, 'umtcpractice.DownloadsUMTC')
+data.setCell(5, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -283,36 +390,60 @@ return data;
                 <span class="method-name">BeforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">BeforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">BeforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">MultipleBrowser(firefox)</span>
+                <span class="method-start">172 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">MultipleBrowser(chrome)</span>
-                <span class="method-start">157 ms</span>
+                <span class="method-start">172 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">MultipleBrowser(edge)</span>
+                <span class="method-start">172 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">lumagda</span>
-                <span class="method-start">6494 ms</span>
+                <span class="method-start">2646 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">lumagda</span>
+                <span class="method-start">6684 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">CheckResults([TestResult name=lumagda status=SUCCESS method=DownloadsUMTC.lumagda()[pri:1, instance:umtcpractice....)</span>
-                <span class="method-start">15191 ms</span>
+                <span class="method-start">13479 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">downloads</span>
-                <span class="method-start">15372 ms</span>
+                <span class="method-start">13667 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">CheckResults([TestResult name=downloads status=FAILURE method=DownloadsUMTC.downloads()[pri:2, instance:umtcpract...)</span>
-                <span class="method-start">47715 ms</span>
+                <span class="method-start">29449 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">SendThruEmail</span>
-                <span class="method-start">49864 ms</span>
+                <span class="method-start">29867 ms</span>
               </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">aftersuite</span>
-                <span class="method-start">54136 ms</span>
-              </div> <!-- configuration-suite after -->
+              <div class="test-method">
+                <span class="method-name">lumagda</span>
+                <span class="method-start">49185 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,10 +1,13 @@
 package umtcpractice;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -23,15 +26,20 @@ public class VariablesAndBrowser {
 	
 	
 public static WebDriver driver;
-public static WebDriver getDriver() {
-    return driver;
-}
+
 
 	
 
 	String website = new String ("https://umtc.dice205.asia/wp-login.php");
 	String ChromePATH = new String ("C:\\Users\\DICE205\\Documents\\chromedriver_win32 (1)\\chromedriver.exe");
 	String ChromeBIN = new String ("webdriver.chrome.driver");
+	String FIREFOXPATH = new String ("C:\\Users\\DICE205\\eclipse-workspace\\Salto-Framework\\lib\\drivers\\geckodriver.exe");
+	String FIREFOXBIN = new String ("webdriver.gecko.driver");
+	String EDGEPATH = new String ("C:\\Users\\DICE205\\eclipse-workspace\\Salto-Framework\\lib\\drivers\\IEDriverServer.exe");
+	String EDGEBIN = new String ("webdriver.edge.driver");
+	
+	
+	
 	String Home = new String ("");
 	String ABOUTUS = new String ("");
 			String COMPANYPROFILE = new String ("//*[@id=\"post-28\"]/td[1]/strong/a");//
@@ -56,19 +64,35 @@ public static WebDriver getDriver() {
 	
 	@Parameters("browser")
 	@BeforeClass
-	public void MultipleBrowser(String browser) {
+	public void MultipleBrowser(String browser) throws Exception {
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 			System.setProperty(ChromeBIN, ChromePATH);
-			ChromeOptions options = new ChromeOptions();     
-		    options.addArguments("--headless"); 
+			//ChromeOptions options = new ChromeOptions();     
+		    //options.addArguments("--headless"); 
 			driver = new ChromeDriver();
-			//driver.getWindowHandle();
+			driver.getWindowHandle();
 			driver.get(website);
-			//driver.manage().window().maximize();
-			            
+			//driver.manage().window().maximize();          
 		}
+		else if(browser.equalsIgnoreCase("firefox")) {   
+			System.setProperty(FIREFOXBIN, FIREFOXPATH);
+			driver = new FirefoxDriver();
+			driver.getWindowHandle();
+			driver.get(website);
+		}else if(browser.equalsIgnoreCase("edge")) {   
+			System.setProperty(EDGEBIN, EDGEPATH);
+			driver = new EdgeDriver();
+			driver.getWindowHandle();
+			driver.get(website);
+		}else {
+			//If no browser passed throw exception
+			throw new Exception("Browser is not correct");
+		}
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
+	
+	
 	
 	@AfterSuite
 	public void aftersuite() {

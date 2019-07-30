@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
-  <parameter name="browser" value="chrome"/>
-  <test name="Downloads UMTC(failed)" parallel="none">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="edge"/>
+  <test name="Edge UMTC(failed)" parallel="tests">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="umtcpractice.DownloadsUMTC">
+        <methods>
+          <include name="lumagda"/>
+          <include name="MultipleBrowser"/>
+          <include name="MultipleBrowser"/>
+          <include name="MultipleBrowser"/>
+          <include name="BeforeTest"/>
+          <include name="BeforeTest"/>
+          <include name="BeforeTest"/>
+          <include name="downloads"/>
+          <include name="CheckResults"/>
+          <include name="SendThruEmail"/>
+        </methods>
+      </class> <!-- umtcpractice.DownloadsUMTC -->
+    </classes>
+  </test> <!-- Edge UMTC(failed) -->
+  <test name="Downloads UMTC(failed)" parallel="tests">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="umtcpractice.DownloadsUMTC">
         <methods>
           <include name="lumagda"/>
           <include name="MultipleBrowser"/>
-          <include name="aftersuite"/>
+          <include name="MultipleBrowser"/>
+          <include name="MultipleBrowser"/>
+          <include name="BeforeTest"/>
+          <include name="BeforeTest"/>
           <include name="BeforeTest"/>
           <include name="downloads"/>
           <include name="CheckResults"/>
@@ -18,4 +40,23 @@
       </class> <!-- umtcpractice.DownloadsUMTC -->
     </classes>
   </test> <!-- Downloads UMTC(failed) -->
+  <test name="Firefox UMTC(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="umtcpractice.DownloadsUMTC">
+        <methods>
+          <include name="lumagda"/>
+          <include name="MultipleBrowser"/>
+          <include name="MultipleBrowser"/>
+          <include name="MultipleBrowser"/>
+          <include name="BeforeTest"/>
+          <include name="BeforeTest"/>
+          <include name="BeforeTest"/>
+          <include name="downloads"/>
+          <include name="CheckResults"/>
+          <include name="SendThruEmail"/>
+        </methods>
+      </class> <!-- umtcpractice.DownloadsUMTC -->
+    </classes>
+  </test> <!-- Firefox UMTC(failed) -->
 </suite> <!-- Failed suite [Suite] -->
