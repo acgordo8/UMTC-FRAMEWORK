@@ -44,5 +44,6 @@
 	<classpathentry kind="lib" path="C:/Users/DICE205/Documents/jar_files/rest-assured-common-3.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DICE205/Documents/jar_files/tagsoup-1.2.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DICE205/Documents/jar_files/xml-path-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DICE205/Documents/ATUTestRecorder_2.1/ATUTestRecorder_2.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="umtcpractice.DownloadsUMTC">
+      <class name="umtcpractice.RestAssuredAPI">
         <methods>
-          <include name="lumagda"/>
-          <include name="BeforeTest"/>
-          <include name="downloads"/>
+          <include name="GetWeatherDetails"/>
         </methods>
-      </class> <!-- umtcpractice.DownloadsUMTC -->
+      </class> <!-- umtcpractice.RestAssuredAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

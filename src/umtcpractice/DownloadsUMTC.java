@@ -1,10 +1,12 @@
 package umtcpractice;
-
+/*
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsEnvironment;
-import java.awt.Rectangle;
+import java.awt.Rectangle;*/
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -22,11 +24,9 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import java.util.Date;
 
-import org.monte.media.Format;
-import org.monte.media.FormatKeys.MediaType;
-import org.monte.media.math.Rational;
-import org.monte.screenrecorder.ScreenRecorder;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -49,12 +49,14 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
 import umtcpractice.ExtentFunctions;
 
 
 public class DownloadsUMTC extends VariablesAndBrowser {
 	
-	
+	 ATUTestRecorder recorder;
 	
 	ExtentReports report;
 	ExtentTest test;
@@ -70,21 +72,28 @@ public class DownloadsUMTC extends VariablesAndBrowser {
     
 	
 	@BeforeTest
-	public void BeforeTest() {	
+	public void BeforeTest() throws ATUTestRecorderException {	
 			ExtentFunctions delete = new ExtentFunctions();   //delete existing extent-report 
 			delete.DeleteExtentReport();
 			
 			
 			report = ExtentFunctions.getInstance();
-			report.loadConfig(new File("C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\extent-config.xml")); // Assigned to
-																					// xampp/htdocs/PBAL-Automationextent-config	
+			report.loadConfig(new File("C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\extent-config.xml"));
+			
+			  DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
+			  Date date = new Date();
+			  //Created object of ATUTestRecorder
+			  //Provide path to store videos and file name format.
+			  recorder = new ATUTestRecorder("C:\\Users\\DICE205\\Documents\\ScriptRecorder\\","TestVideo-"+dateFormat.format(date),false);
+			
+																					
 	
 	}
 
    
 	@Test(priority = 1)
 	public void lumagda() throws Exception {
-		
+		recorder.start();
 		test = report.startTest("Login Users");
 		test.log(LogStatus.INFO, "Enter Username");
 		driver.findElement(By.id("user_login")).sendKeys("umtc_admin");
@@ -136,12 +145,13 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 	}
 	
 	@AfterMethod
-	public void CheckResults(ITestResult testResults) throws IOException {
+	public void CheckResults(ITestResult testResults) throws IOException, ATUTestRecorderException {
 
 		if (testResults.getStatus() == ITestResult.FAILURE) {
-			String screenShotPath = GetScreenShot.capture(driver,"screenShotName");
+			String screenShotPath = GetScreenShot.capture(driver,"FailedTestCase");
 			test.log(LogStatus.FAIL, testResults.getThrowable());
 			test.log(LogStatus.FAIL, "Test Case Failed because of below poblem" + test.addScreenCapture(screenShotPath));
+			recorder.stop();
 		}  else if (testResults.getStatus() == ITestResult.SUCCESS) {
 			test.log(LogStatus.PASS, "Test Case is passed");
 		} else if (testResults.getStatus() == ITestResult.SKIP) {

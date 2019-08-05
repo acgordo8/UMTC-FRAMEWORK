@@ -11,6 +11,7 @@
           <include name="MultipleBrowser"/>
           <include name="BeforeTest"/>
           <include name="downloads"/>
+          <include name="CheckResults"/>
         </methods>
       </class> <!-- umtcpractice.DownloadsUMTC -->
     </classes>

@@ -48,7 +48,7 @@ public class ExtentFunctions {
 		
 	}
 	
-	//Delete first the existing UMTC_REPORTS.html before creating new one
+	  //Delete first the existing UMTC_REPORTS.html before creating new one
 		public void DeleteExtentReport() {
 			File file = new File("C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\test-output\\UMTC_REPORTS.html");
 	        if(file.delete()){

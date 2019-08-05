@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -20,10 +21,12 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
 	
 public class VariablesAndBrowser {
 
-	
 	
 public static WebDriver driver;
 
@@ -62,10 +65,11 @@ public static WebDriver driver;
 	
 	String DisableNotification = new String ("");
 	
+	
 	@Parameters("browser")
 	@BeforeClass
 	public void MultipleBrowser(String browser) throws Exception {
-		
+
 		if(browser.equalsIgnoreCase("chrome")) {
 			System.setProperty(ChromeBIN, ChromePATH);
 			//ChromeOptions options = new ChromeOptions();     
@@ -96,7 +100,6 @@ public static WebDriver driver;
 	
 	@AfterSuite
 	public void aftersuite() {
-		
 		driver.quit();
 	}
 	
