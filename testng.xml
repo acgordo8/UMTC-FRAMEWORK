@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests"><!-- change "none" to "tests" for parallel browser testing -->
+<suite name="Suite" parallel="none"><!-- change "none" to "tests" for parallel browser testing -->
 										<!-- none meaning one at a time processing of test -->
 											<!-- tests meaning simultaneously processing of test -->
-  <test thread-count="3" name="tests">
+  <test thread-count="1" name="tests">
  
 	<test name="Downloads UMTC">
-		<parameter name="browser" value="chrome" />
+		<!-- <parameter name="browser" value="chrome" /> -->
 		<classes>	
+			<class name="umtcpractice.VariablesAndBrowser" />
 			<class name="umtcpractice.DownloadsUMTC" />
+			<class name="umtcpractice.AboutUsUMTC" />
 			<method>
 				<include name=""/> <!-- use this if you want to test specific test in a class -->
 									<!--you can use exclude if you want not to include or enabled = false in classes  -->

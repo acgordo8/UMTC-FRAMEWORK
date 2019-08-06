@@ -54,7 +54,7 @@ import atu.testrecorder.exceptions.ATUTestRecorderException;
 import umtcpractice.ExtentFunctions;
 
 
-public class DownloadsUMTC extends VariablesAndBrowser {
+public class DownloadsUMTC  {
 	
 	 ATUTestRecorder recorder;
 	
@@ -96,14 +96,14 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 		recorder.start();
 		test = report.startTest("Login Users");
 		test.log(LogStatus.INFO, "Enter Username");
-		driver.findElement(By.id("user_login")).sendKeys("umtc_admin");
+		VariablesAndBrowser.getDriver().findElement(By.id("user_login")).sendKeys("umtc_admin");
 		test.log(LogStatus.INFO, "Enter Password");
-		driver.findElement(By.id("user_pass")).sendKeys("92R2$Hg@d4TYgW3r3x");
+		VariablesAndBrowser.getDriver().findElement(By.id("user_pass")).sendKeys("92R2$Hg@d4TYgW3r3x");
 		test.log(LogStatus.INFO, "Click Remember me");
-		driver.findElement(By.id("rememberme")).click();
+		VariablesAndBrowser.getDriver().findElement(By.id("rememberme")).click();
 		test.log(LogStatus.INFO, "Submit Buttons");
-		driver.findElement(By.id("wp-submit")).click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		VariablesAndBrowser.getDriver().findElement(By.id("wp-submit")).click();
+		VariablesAndBrowser.getDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		//Thread.sleep(3000);
 	}	
@@ -113,30 +113,30 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 	public void downloads() throws InterruptedException, FindFailed {
 		test = report.startTest("Downloads");
 		test.log(LogStatus.INFO, "Hover Downloads");
-		WebElement download = driver.findElement(By.linkText("Downloads"));
-		Actions action = new Actions(driver);
+		WebElement download = VariablesAndBrowser.getDriver().findElement(By.linkText("Downloads"));
+		Actions action = new Actions(VariablesAndBrowser.getDriver());
 		action.moveToElement(download).build().perform();
 		Thread.sleep(3000);
 
 		test.log(LogStatus.INFO, "Click Add new");
-		driver.findElement(By.xpath("//*[@id=\"menu-posts-download\"]/ul/li[3]/a")).click();
+		VariablesAndBrowser.getDriver().findElement(By.xpath("//*[@id=\"menu-posts-download\"]/ul/li[3]/a")).click();
 		
 		test.log(LogStatus.INFO, "Inputing Text in TextField");
-		driver.findElement(By.id("title")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Welcome UMTC");
+		VariablesAndBrowser.getDriver().findElement(By.id("title")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Welcome UMTC");
 		Thread.sleep(3000);
 		
 		
 		
 		//Select Files
 		test.log(LogStatus.INFO, "Click File Upload");
-		driver.findElement(By.id("file-upload")).click();
+		VariablesAndBrowser.getDriver().findElement(By.id("file-upload")).click();
 		        s.wait(fileInputTextBox, 20);
 		        s.type(fileInputTextBox, inputFilePath + "index.JPG");
 		        s.click(openButton);
 		Thread.sleep(3000);
 		
 		test.log(LogStatus.INFO, "Clicking Publish");
-		driver.findElement(By.id("publishes")).click();
+		VariablesAndBrowser.getDriver().findElement(By.id("publish")).click();
 		Thread.sleep(2000);
 		//test.log(LogStatus.INFO, "Clicking Preview");
 		//driver.findElement(By.id("post-preview")).click();
@@ -148,7 +148,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 	public void CheckResults(ITestResult testResults) throws IOException, ATUTestRecorderException {
 
 		if (testResults.getStatus() == ITestResult.FAILURE) {
-			String screenShotPath = GetScreenShot.capture(driver,"FailedTestCase");
+			String screenShotPath = GetScreenShot.capture(VariablesAndBrowser.getDriver(),"FailedTestCase");
 			test.log(LogStatus.FAIL, testResults.getThrowable());
 			test.log(LogStatus.FAIL, "Test Case Failed because of below poblem" + test.addScreenCapture(screenShotPath));
 			recorder.stop();
