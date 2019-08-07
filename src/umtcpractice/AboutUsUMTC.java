@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
-public class AboutUsUMTC{
+public class AboutUsUMTC extends VariablesAndBrowser{
 
 	
 	ExtentReports report;
@@ -29,23 +29,23 @@ public class AboutUsUMTC{
 		Thread.sleep(2000);
 	}	*/
 		
-	@Test(priority = 1)
+	@Test(priority = 3)
 	public void aboutus() throws InterruptedException {
 		
-		WebElement pages = VariablesAndBrowser.getDriver().findElement(By.linkText("Pages"));
-		Actions action = new Actions(VariablesAndBrowser.getDriver());
+		WebElement pages = driver.findElement(By.linkText("Pages"));
+		Actions action = new Actions(driver);
 		action.moveToElement(pages).build().perform();
 		Thread.sleep(3000);
 		
-		VariablesAndBrowser.getDriver().findElement(By.partialLinkText("All")).click();
+		driver.findElement(By.partialLinkText("All")).click();
 		Thread.sleep(3000);
-		VariablesAndBrowser.getDriver().findElement(By.xpath("//*[@id=\"wpbody-content\"]/div[4]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"wpbody-content\"]/div[4]/a")).click();
 		Thread.sleep(3000);
 		//Close Notification
-		VariablesAndBrowser.getDriver().findElement(By.cssSelector("#editor > div > div > div > div:nth-child(6) > div > div > div > div > button")).click();
-		VariablesAndBrowser.getDriver().findElement(By.id("post-title-0")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Information Technology");
+		driver.findElement(By.cssSelector("#editor > div > div > div > div:nth-child(6) > div > div > div > div > button")).click();
+		driver.findElement(By.id("post-title-0")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Information Technology");
 		Thread.sleep(3000);
-		VariablesAndBrowser.getDriver().findElement(By.xpath("//*[@id=\"mce_0\"]")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Information Technology");
+		driver.findElement(By.xpath("//*[@id=\"mce_0\"]")).sendKeys(Keys.chord(Keys.CONTROL, "a"),"Information Technology");
 		
 		
 	}

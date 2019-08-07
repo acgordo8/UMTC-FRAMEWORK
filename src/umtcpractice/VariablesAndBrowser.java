@@ -26,15 +26,9 @@ import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 	
 public class VariablesAndBrowser {
+
 	
-		
-		private static WebDriver driver;
-		public static WebDriver getDriver() {
-			
-			return driver;
-		}
-		
-		
+public static WebDriver driver;
 
 
 	
@@ -72,15 +66,8 @@ public class VariablesAndBrowser {
 	String DisableNotification = new String ("");
 	
 	
-	@BeforeSuite
-	public void singlebrowsermultipleclasses() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\lib\\drivers\\chromedriver.exe");
-		 driver = new ChromeDriver();
-	     driver.get(website);
-	}
-	
-	/*@Parameters("browser")
-	@BeforeSuite
+	@Parameters("browser")
+	@BeforeClass
 	public void MultipleBrowser(String browser) throws Exception {
 
 		if(browser.equalsIgnoreCase("chrome")) {
@@ -107,7 +94,7 @@ public class VariablesAndBrowser {
 			throw new Exception("Browser is not correct");
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}*/
+	}
 	
 	
 	

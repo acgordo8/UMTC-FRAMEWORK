@@ -16,9 +16,7 @@
       </class> <!-- umtcpractice.AboutUsUMTC -->
       <class name="umtcpractice.DownloadsUMTC">
         <methods>
-          <include name="lumagda"/>
           <include name="BeforeTest"/>
-          <include name="downloads"/>
           <include name="CheckResults"/>
           <include name="SendThruEmail"/>
         </methods>
