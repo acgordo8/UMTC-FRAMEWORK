@@ -3,12 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <test name="Downloads UMTC(failed)" parallel="none">
     <classes>
-      <class name="umtcpractice.VariablesAndBrowser">
-        <methods>
-          <include name="singlebrowsermultipleclasses"/>
-          <include name="aftersuite"/>
-        </methods>
-      </class> <!-- umtcpractice.VariablesAndBrowser -->
       <class name="umtcpractice.AboutUsUMTC">
         <methods>
           <include name="aboutus"/>
@@ -16,9 +10,9 @@
       </class> <!-- umtcpractice.AboutUsUMTC -->
       <class name="umtcpractice.DownloadsUMTC">
         <methods>
+          <include name="lumagda"/>
           <include name="BeforeTest"/>
-          <include name="CheckResults"/>
-          <include name="SendThruEmail"/>
+          <include name="downloads"/>
         </methods>
       </class> <!-- umtcpractice.DownloadsUMTC -->
     </classes>

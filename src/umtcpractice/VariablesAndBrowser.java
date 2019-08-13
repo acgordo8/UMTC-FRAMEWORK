@@ -34,11 +34,11 @@ public static WebDriver driver;
 	
 
 	String website = new String ("https://umtc.dice205.asia/wp-login.php");
-	String ChromePATH = new String ("C:\\Users\\DICE205\\Documents\\chromedriver_win32 (1)\\chromedriver.exe");
+	String ChromePATH = new String ("C:\\Users\\ajgor\\eclipse-workspace\\UMTC-FRAMEWORK\\lib\\drivers\\chromedriver.exe");
 	String ChromeBIN = new String ("webdriver.chrome.driver");
-	String FIREFOXPATH = new String ("C:\\Users\\DICE205\\eclipse-workspace\\Salto-Framework\\lib\\drivers\\geckodriver.exe");
+	String FIREFOXPATH = new String ("C:\\Users\\ajgor\\eclipse-workspace\\UMTC-FRAMEWORK\\lib\\drivers\\geckodriver.exe");
 	String FIREFOXBIN = new String ("webdriver.gecko.driver");
-	String EDGEPATH = new String ("C:\\Users\\DICE205\\eclipse-workspace\\Salto-Framework\\lib\\drivers\\IEDriverServer.exe");
+	String EDGEPATH = new String ("C:C:\\Users\\ajgor\\eclipse-workspace\\UMTC-FRAMEWORK\\lib\\drivers\\IEDriverServer.exe");
 	String EDGEBIN = new String ("webdriver.edge.driver");
 	
 	

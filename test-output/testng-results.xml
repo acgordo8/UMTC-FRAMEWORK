@@ -1,111 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="3" passed="2">
+<testng-results skipped="3" failed="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="88040" started-at="2019-08-06T01:10:26Z" finished-at="2019-08-06T01:11:54Z">
+  <suite name="Suite" duration-ms="366" started-at="2019-08-13T00:39:33Z" finished-at="2019-08-13T00:39:33Z">
     <groups>
     </groups>
-    <test name="tests" duration-ms="4" started-at="2019-08-06T01:10:26Z" finished-at="2019-08-06T01:10:26Z">
+    <test name="tests" duration-ms="4" started-at="2019-08-13T00:39:33Z" finished-at="2019-08-13T00:39:33Z">
     </test> <!-- tests -->
-    <test name="Downloads UMTC" duration-ms="88000" started-at="2019-08-06T01:10:26Z" finished-at="2019-08-06T01:11:54Z">
+    <test name="Downloads UMTC" duration-ms="331" started-at="2019-08-13T00:39:33Z" finished-at="2019-08-13T00:39:33Z">
       <class name="umtcpractice.VariablesAndBrowser">
-        <test-method status="PASS" signature="singlebrowsermultipleclasses()[pri:0, instance:umtcpractice.VariablesAndBrowser@32464a14]" name="singlebrowsermultipleclasses" is-config="true" duration-ms="6764" started-at="2019-08-06T09:10:19Z" finished-at="2019-08-06T09:10:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- singlebrowsermultipleclasses -->
-        <test-method status="PASS" signature="aftersuite()[pri:0, instance:umtcpractice.VariablesAndBrowser@32464a14]" name="aftersuite" is-config="true" duration-ms="1533" started-at="2019-08-06T09:11:54Z" finished-at="2019-08-06T09:11:56Z">
+        <test-method status="SKIP" signature="aftersuite()[pri:0, instance:umtcpractice.VariablesAndBrowser@59ec2012]" name="aftersuite" is-config="true" duration-ms="0" started-at="2019-08-13T08:39:33Z" finished-at="2019-08-13T08:39:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
       </class> <!-- umtcpractice.VariablesAndBrowser -->
       <class name="umtcpractice.DownloadsUMTC">
-        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:umtcpractice.DownloadsUMTC@4e4aea35]" name="BeforeTest" is-config="true" duration-ms="481" started-at="2019-08-06T09:10:26Z" finished-at="2019-08-06T09:10:26Z">
+        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:umtcpractice.DownloadsUMTC@42dafa95]" name="BeforeTest" is-config="true" duration-ms="312" started-at="2019-08-13T08:39:33Z" finished-at="2019-08-13T08:39:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method status="PASS" signature="lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@4e4aea35]" name="lumagda" duration-ms="4006" started-at="2019-08-06T09:10:26Z" finished-at="2019-08-06T09:10:31Z">
+        <test-method status="FAIL" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.DownloadsUMTC@42dafa95]" name="MultipleBrowser" is-config="true" duration-ms="0" started-at="2019-08-13T08:39:33Z" finished-at="2019-08-13T08:39:33Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by @Configuration on method MultipleBrowser but has not been marked @Optional or defined
+in C:\Users\ajgor\eclipse-workspace\UMTC-FRAMEWORK\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by @Configuration on method MultipleBrowser but has not been marked @Optional or defined
+in C:\Users\ajgor\eclipse-workspace\UMTC-FRAMEWORK\testng.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:197)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MultipleBrowser -->
+        <test-method status="SKIP" signature="lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@42dafa95]" name="lumagda" duration-ms="1" started-at="2019-08-13T08:39:33Z" finished-at="2019-08-13T08:39:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lumagda -->
-        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@4e4aea35]" name="CheckResults" is-config="true" duration-ms="430" started-at="2019-08-06T09:10:31Z" finished-at="2019-08-06T09:10:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=lumagda status=SUCCESS method=DownloadsUMTC.lumagda()[pri:1, instance:umtcpractice.DownloadsUMTC@4e4aea35] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@42dafa95]" name="CheckResults" is-config="true" duration-ms="0" started-at="2019-08-13T08:39:33Z" finished-at="2019-08-13T08:39:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckResults -->
-        <test-method status="PASS" signature="downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@4e4aea35]" name="downloads" duration-ms="38585" started-at="2019-08-06T09:11:10Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-08-06T09:11:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- downloads -->
-        <test-method status="PASS" signature="CheckResults(org.testng.ITestResult)[pri:0, instance:umtcpractice.DownloadsUMTC@4e4aea35]" name="CheckResults" is-config="true" duration-ms="111" started-at="2019-08-06T09:11:49Z" finished-at="2019-08-06T09:11:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=downloads status=SUCCESS method=DownloadsUMTC.downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@4e4aea35] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckResults -->
-        <test-method status="PASS" signature="SendThruEmail()[pri:0, instance:umtcpractice.DownloadsUMTC@4e4aea35]" name="SendThruEmail" is-config="true" duration-ms="5066" started-at="2019-08-06T09:11:49Z" finished-at="2019-08-06T09:11:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SendThruEmail -->
-      </class> <!-- umtcpractice.DownloadsUMTC -->
-      <class name="umtcpractice.AboutUsUMTC">
-        <test-method status="FAIL" signature="aboutus()[pri:3, instance:umtcpractice.AboutUsUMTC@1efee8e7]" name="aboutus" duration-ms="39279" started-at="2019-08-06T09:10:31Z" finished-at="2019-08-06T09:11:10Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="SKIP" signature="downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@42dafa95]" name="downloads" duration-ms="0" started-at="2019-08-13T08:39:33Z" depends-on-methods="umtcpractice.DownloadsUMTC.lumagda" finished-at="2019-08-13T08:39:33Z">
+          <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="mce_0"]"}
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'LAPTOP-RC74JETD', ip: '192.168.1.124', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:49760}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a), userDataDir=C:\Users\DICE205\AppData\Local\Temp\scoped_dir20612_8634}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.142, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: a1121b9e92d42018332c4320e70690b1
-*** Element info: {Using=xpath, value=//*[@id="mce_0"]}]]>
+              <![CDATA[Method DownloadsUMTC.downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@42dafa95] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="mce_0"]"}
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'LAPTOP-RC74JETD', ip: '192.168.1.124', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:49760}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a), userDataDir=C:\Users\DICE205\AppData\Local\Temp\scoped_dir20612_8634}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.142, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: a1121b9e92d42018332c4320e70690b1
-*** Element info: {Using=xpath, value=//*[@id="mce_0"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at umtcpractice.AboutUsUMTC.aboutus(AboutUsUMTC.java:48)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+              <![CDATA[java.lang.Throwable: Method DownloadsUMTC.downloads()[pri:2, instance:umtcpractice.DownloadsUMTC@42dafa95] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
 	at org.testng.TestRunner.privateRun(TestRunner.java:774)
@@ -124,10 +91,24 @@ Session ID: a1121b9e92d42018332c4320e70690b1
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloads -->
+        <test-method status="SKIP" signature="SendThruEmail()[pri:0, instance:umtcpractice.DownloadsUMTC@42dafa95]" name="SendThruEmail" is-config="true" duration-ms="0" started-at="2019-08-13T08:39:33Z" finished-at="2019-08-13T08:39:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendThruEmail -->
+      </class> <!-- umtcpractice.DownloadsUMTC -->
+      <class name="umtcpractice.AboutUsUMTC">
+        <test-method status="SKIP" signature="aboutus()[pri:3, instance:umtcpractice.AboutUsUMTC@402a079c]" name="aboutus" duration-ms="1" started-at="2019-08-13T08:39:33Z" finished-at="2019-08-13T08:39:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aboutus -->
+        <test-method status="SKIP" signature="MultipleBrowser(java.lang.String)[pri:0, instance:umtcpractice.AboutUsUMTC@402a079c]" name="MultipleBrowser" is-config="true" duration-ms="0" started-at="2019-08-13T08:39:33Z" finished-at="2019-08-13T08:39:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MultipleBrowser -->
       </class> <!-- umtcpractice.AboutUsUMTC -->
     </test> <!-- Downloads UMTC -->
   </suite> <!-- Suite -->

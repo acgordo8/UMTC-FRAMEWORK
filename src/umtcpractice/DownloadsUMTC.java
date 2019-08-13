@@ -63,12 +63,12 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 
 
 	
-	//File upload using Sikuli framework
+	/*//File upload using Sikuli framework
 	String filepath = "C:\\Users\\DICE205\\Downloads\\";
 	String inputFilePath = "C:\\Users\\DICE205\\Downloads\\";
 	Screen s = new Screen();
     Pattern fileInputTextBox = new Pattern(filepath + "filetextbox.JPG");
-    Pattern openButton = new Pattern(filepath + "Open.JPG");
+    Pattern openButton = new Pattern(filepath + "Open.JPG");*/
     
 	
 	@BeforeTest
@@ -78,13 +78,13 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 			
 			
 			report = ExtentFunctions.getInstance();
-			report.loadConfig(new File("C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\extent-config.xml"));
+			report.loadConfig(new File("C:\\Users\\ajgor\\eclipse-workspace\\UMTC-FRAMEWORK\\extent-config.xml"));
 			
 			  DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
 			  Date date = new Date();
 			  //Created object of ATUTestRecorder
 			  //Provide path to store videos and file name format.
-			  recorder = new ATUTestRecorder("C:\\Users\\DICE205\\Documents\\ScriptRecorder\\","TestVideo-"+dateFormat.format(date),false);
+			  recorder = new ATUTestRecorder("C:\\Users\\ajgor\\Documents\\ScriptRecorder\\","TestVideo-"+dateFormat.format(date),false);
 			
 																					
 	
@@ -126,7 +126,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 		Thread.sleep(3000);
 		
 		
-		
+		/*
 		//Select Files
 		test.log(LogStatus.INFO, "Click File Upload");
 		driver.findElement(By.id("file-upload")).click();
@@ -137,7 +137,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 		
 		test.log(LogStatus.INFO, "Clicking Publish");
 		driver.findElement(By.id("publishes")).click();
-		Thread.sleep(2000);
+		Thread.sleep(2000);*/
 		//test.log(LogStatus.INFO, "Clicking Preview");
 		//driver.findElement(By.id("post-preview")).click();
 	
@@ -191,7 +191,7 @@ public class DownloadsUMTC extends VariablesAndBrowser {
 					messageBodyPart1.setText("This is message body");
 					
 					MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-					String filename = "C:\\Users\\DICE205\\eclipse-workspace\\UMTC-FRAMEWORK\\test-output\\UMTC_REPORTS.html";
+					String filename = "C:\\Users\\ajgor\\eclipse-workspace\\UMTC-FRAMEWORK\\test-output\\UMTC_REPORTS.html";
 					DataSource source = new FileDataSource(filename);
 		 
 					messageBodyPart2.setDataHandler(new DataHandler(source));
