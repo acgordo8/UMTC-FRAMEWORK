@@ -6,7 +6,7 @@
   <test thread-count="1" name="tests">
  
 	<test name="Downloads UMTC">
-		<!-- <parameter name="browser" value="chrome" /> -->
+		<parameter name="browser" value="chrome" />
 		<classes>	
 			<class name="umtcpractice.VariablesAndBrowser" />
 			<class name="umtcpractice.DownloadsUMTC" />
